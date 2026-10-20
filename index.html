@@ -642,7 +642,8 @@ function countUp(slide){
     function fmt(v){ return comma ? v.toLocaleString('en-US') : String(v); }
     function step(t){
       if (!t0) t0 = t;
-      var q = Math.min(1, (t - t0) / 480), v = Math.round(to * (1 - Math.pow(1 - q, 3)));
+      // starts once the number has faded in, then counts for 1.6 s so the climb is visible
+      var q = Math.max(0, Math.min(1, (t - t0 - 400) / 1600)), v = Math.round(to * (1 - Math.pow(1 - q, 3)));
       e.textContent = fmt(v);
       if (q < 1) requestAnimationFrame(step);
     }
