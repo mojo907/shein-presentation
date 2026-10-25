@@ -285,6 +285,65 @@ body{font-family:var(--sans);-webkit-font-smoothing:antialiased;text-rendering:o
 .t-word{font-size:340px!important}
 .idea{font-family:var(--serif)}
 
+
+/* ================= Layout v2: poster grid, no boxes, no hairlines ================= */
+.kicker,.legend{display:none!important}
+.prog{left:0!important;right:0!important;top:0!important;gap:0!important}
+.prog i{height:8px!important}
+.prog span{display:none!important}
+.num{top:40px!important;bottom:auto!important;right:110px!important;font:400 56px/1 var(--disp)!important;color:var(--fg)!important;background:none!important;padding:0!important;margin:0!important;letter-spacing:.02em}
+.who{bottom:44px!important}
+.h1{top:120px!important}
+/* lists become stacked headlines */
+.li{display:block!important;border:0!important;padding:0 0 22px!important}
+.li .n{display:none!important}
+.li .t{font:400 60px/1.02 var(--disp)!important;text-transform:uppercase;letter-spacing:.005em!important}
+.li:nth-child(even) .t{color:var(--acc)}
+.li .t small{font:500 24px/1.35 var(--sans)!important;text-transform:none;color:var(--mute);margin-top:8px;letter-spacing:0}
+.side-list .li .t{font-size:46px!important}
+.side-list .li{padding-bottom:16px!important}
+.list.tight .li .t{font-size:50px!important}
+.list.tight .li{padding-bottom:14px!important}
+.econ-l .li .t{font-size:46px!important}
+.econ-l .sub{border:0!important;padding:4px 0 0!important}
+.econ-l .sub div{font:600 32px/1.4 var(--sans)!important}
+/* no glass cards: text sits on the photo */
+.glass{background:none!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important;border:0!important;text-shadow:0 2px 30px rgba(0,0,0,.65)}
+/* PESTEL map: six tall columns, giant letters */
+.w-pestel .pgrid{grid-template-columns:repeat(6,1fr)!important;gap:0!important;top:290px!important;bottom:140px!important}
+.w-pestel .pc{background:none!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important;border:0!important;border-left:2px solid rgba(255,255,255,.22)!important;padding:0 24px!important;min-height:0!important;display:flex;flex-direction:column}
+.w-pestel .pc:first-child{border-left:0!important;padding-left:0!important}
+.w-pestel .pc .L{font-size:250px!important;line-height:.82!important;color:var(--neg)}
+.w-pestel .pc.mixed .L{color:var(--acc)}
+.w-pestel .pc .ic{position:static!important;margin-top:22px;width:40px;height:40px;color:var(--fg)}
+.w-pestel .pc .nm{margin:14px 0 10px!important;color:var(--fg)}
+.w-pestel .pc .t{font:500 27px/1.25 var(--sans)!important}
+.w-pestel .pc .tag{position:static!important;margin-top:auto}
+/* KPIs: one giant number, the rest around it */
+.kpis{grid-template-columns:1.25fr 1fr 1fr!important;top:290px!important;gap:10px 60px!important}
+.kpi{border:0!important;padding:10px 0 34px!important}
+.kpi.big{grid-row:span 2}
+.kpi.big .n{font-size:400px!important;line-height:.8!important}
+.kpi.big .l{font-size:34px!important;color:var(--fg)}
+/* intro rows */
+.row{border:0!important;padding:13px 0!important}
+.row .v{font-weight:600}
+/* economic valuation, trio, pillars: no rules */
+.val{border:0!important;padding-top:0!important}
+.trio>div{border:0!important;padding-top:0!important}
+.trio .tag{font-size:24px!important}
+.pil{border:0!important;padding:16px 0!important}
+/* keep / change: giant words instead of boxes */
+.kc>div{background:none!important;border:0!important;padding:0!important;min-height:0!important}
+.kc .tag{font:400 130px/.9 var(--disp)!important;letter-spacing:0!important}
+.kc .keep .tag{color:transparent!important;-webkit-text-stroke:2px var(--fg)}
+.kc .change .tag{color:var(--acc)!important}
+.kc li{font-size:42px!important}
+.stage>.slide:nth-child(2) .num{color:#fff!important;text-shadow:0 2px 20px rgba(0,0,0,.6)}
+.pil .k i{display:none!important}
+.pil .k{font-size:64px!important}
+.pil{grid-template-columns:480px 1fr!important;align-items:baseline!important}
+
 /* ---------- notes panel / hint ---------- */
 #notesPanel{position:fixed;left:0;right:0;bottom:0;max-height:38vh;overflow:auto;background:rgba(8,8,10,.97);color:#F4F4F2;
   font:400 18px/1.55 var(--sans);padding:22px 40px 28px;border-top:3px solid var(--acc);transform:translateY(100%);transition:transform .3s var(--ease);z-index:10}
